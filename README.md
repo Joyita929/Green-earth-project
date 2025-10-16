@@ -37,83 +37,79 @@ ii.) let=>
     scope: let is block scoped. It means that it can be accessed only inside of curly braces that it resides in.
     Example:
         function lb(){
-                let labib="joyita"
-				if(true){
-					let sen="sen"
-					console.log(joyita)//prints joyita. this will not show because the code has a reference error
-				}
-				console.log(sen)//reference error
-			}
-			lb()
-	Hoisting: variable declared with let is hoisted but stay in a temporal dead zone.This means the variable can not be accessed before declaration.
-	
-	redeclare and reinitialize : variable using let can not be redeclared but it can be reinitialized.
-	
-	Example:
-	
-	console.log(x) //ReferenceError
-	let x=30;
-	let x='James' //Here x is redeclared which is not valid. SyntaxError
-	x=20; // x is reinitialized
+                let joyita="joyita"
+                if(true){
+                    let sen="sen"
+                    console.log(joyita)//prints joyita. this will not show because the code has a reference error
+                    }
+                console.log(sen)//reference error
+                }
+            lb()
+    Hoisting: variable declared with let is hoisted but stay in a temporal dead zone.This means the variable can not be accessed before declaration.
+
+    redeclare and reinitialize : variable using let can not be redeclared but it can be reinitialized.
+
+    Example:
+
+    console.log(x) //ReferenceError
+    let x=30;
+    let x='James' //Here x is redeclared which is not valid. SyntaxError
+    x=20; // x is reinitialized
 
     console.log(x)
-	
+
 iii.) const =>
-	scope: const is block scoped.
-	
-	Hoisting: variable declared with const is hoisted. But stay in a temporal dead zone
-	
-	redeclare and reinitialize : variable using const can not be redeclared or reinitialized.But for non-primitive data type like array,object only the reference can't be changed.But you can modify the data inside the array,object
-	
-	Example:
-	
-	console.log(x) //ReferenceError 
-	const x=30; 
-	const x='James' //Here x is redeclared which is not valid. SyntaxError
-	x=20; // x is reinitialized which is not allowed. TypeError
-	console.log(x) 
-	
-	
+    scope: const is block scoped.
+
+    Hoisting: variable declared with const is hoisted. But stay in a temporal dead zone
+    redeclare and reinitialize : variable using const can not be redeclared or reinitialized.But for non-primitive data type like array,object only the reference can't be changed.But you can modify the data inside the array,object
+
+Example:
+    console.log(x) //ReferenceError
+    const x=30;
+    const x='James' //Here x is redeclared which is not valid. SyntaxError
+    x=20; // x is reinitialized which is not allowed. TypeError
+    console.log(x)
+
 1) What is the difference between map(), forEach(), and filter()?
 
 map,forEach,filter are some of the array methods.They don't modify the original array.The differences are as following
 i.) map()=>
-	
-	a) Transformation: map() is used to transform each element of an array. It is done by applying a callback function. a callback function is noting a function that is passed inside as a parameter.map transforms the data according to the callback function
-	
-	b) Return Value: It returns a new array after compilation of the transformation.The number of array element in the new array equals that of the previous array.
-	
-	c)It is used when every element of a array need to go through a transformation.map() doesn't change the previous array.It internally copy the array do the transformation and returns it.
-	
-	Example:
-	const arr=[1,2,3]
-	const ar2=arr.map(x=>x*2)
-	console.log(ar2) // [2,4,6]
-	
+
+    a) Transformation: map() is used to transform each element of an array. It is done by applying a callback function. a callback function is noting a function that is passed inside as a parameter.map transforms the data according to the callback function
+
+    b) Return Value: It returns a new array after compilation of the transformation.The number of array element in the new array equals that of the previous array.
+
+    c)It is used when every element of a array need to go through a transformation.map() doesn't change the previous array.It internally copy the array do the transformation and returns it.
+
+    Example:
+    const arr=[1,2,3]
+    const ar2=arr.map(x=>x*2)
+    console.log(ar2) // [2,4,6]
+
 ii.)forEach() =>
 
-	a)It is used to loop over every element of a array with the help of a callback function.
-	
-	b) Return Value: It returns undefined
-	
-	c)It is used only when there is no need for a return of an array and also for console.log every element or just apply a change.
-	
-	Example:
-	
-	const arr=[1,2,3]
-	arr.forEach(x=>console.log(x*2))
-	
+    a)It is used to loop over every element of a array with the help of a callback function.
+
+    b) Return Value: It returns undefined
+
+    c)It is used only when there is no need for a return of an array and also for console.log every element or just apply a change.
+
+Example:
+
+    const arr=[1,2,3]
+    arr.forEach(x=>console.log(x*2))
+
 iii.) filter() =>
-	a)It is used when we want to split and bring out elements from an array based on a condition.filter() uses a callback function to achieve it.
-	b) It returns boolean and  a array containing the elements of the previous array that passed the conditional checks.
-	c) it is used to generate a subset of the previous array
-	
-	Example:
-	const arr=[1,2,3]
-	const ar2=arr.filter(x=>x%2)
+    a)It is used when we want to split and bring out elements from an array based on a condition.filter() uses a callback function to achieve it.
+    b) It returns boolean and  a array containing the elements of the previous array that passed the conditional checks.
+    c) it is used to generate a subset of the previous array
+Example:
+    const arr=[1,2,3]
+    const ar2=arr.filter(x=>x%2)
     console.log(ar2) // [1,3]
 
- 3) What are arrow functions in ES6?
+3) What are arrow functions in ES6?
 
  Ans: arrow function is a shorter way of declaring function. arrow function doesn't have arguments object like traditional function. when declaring arrow function we don't use function keyword.arrow function doesn't have its own "this" .It can be used to write shorthand callback function.arrow function are not hoisted.They are not initialized until execution.
 
@@ -124,7 +120,7 @@ multiline and multi-parameter syntax: (param1,param2)=>{ return body}
 
 when arrow function has 1 parameter and 1 expression we can avoid the bracket and return as it automatically returns the body
 
- 4) How does destructuring assignment work in ES6?
+ 1) How does destructuring assignment work in ES6?
 
 Ans: Destructuring is used to extract values from array and property from object.It is used a shorthand for writing more clean and readable and concise code.
 
